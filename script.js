@@ -4,7 +4,17 @@ let noButtonClicks = 0; // Variable to track the number of clicks on the "No" bu
 function handleNoButtonClick() {
   noButtonClicks++; // Increment the click count
 
-  if (noButtonClicks >= 5) {
+  if (noButtonClicks >= 7) {
+    // Check if the click count is 7 or more
+    // Change the background image to "fresh.jpg"
+    document.querySelector(".image").src = "images/fresh.jpg";
+    // Update text content
+    document.getElementById("question").textContent = "Now What";
+    // Remove the "No" button
+    document.getElementById("no-button").remove();
+    // Make the "Yes" button huge
+    document.getElementById("yesButton").style.fontSize = "10rem";
+  } else if (noButtonClicks >= 5) {
     // Check if the click count is 5 or more
     // Change the image source to "mad.jpg"
     document.querySelector(".image").src = "images/mad.jpg";
@@ -51,24 +61,23 @@ document
   .getElementById("no-button")
   .addEventListener("click", handleNoButtonClick);
 
-  function showMessage(response) {
-    if (response === "Yes") {
-      // Remove name message and no button
-      document.getElementById("name").remove();
-      document.getElementById("no-button").remove();
-  
-      // Update text content, show message, and change image source to "dance.gif"
-      const yesMessage = document.getElementById("question");
-      yesMessage.textContent = "LESGOOO see you on the 14th babygirl😘😘";
-      yesMessage.style.display = "block";
-      yesMessage.style.fontSize = "24px"; // Adjust font size here
-      document.querySelector(".image").src = "images/dance.gif";
-  
-      // Change background image
-      document.body.style.backgroundImage = "url('images/toothless.gif')";
-  
-      // Remove yes button
-      document.getElementById("yesButton").remove();
-    }
+function showMessage(response) {
+  if (response === "Yes") {
+    // Remove name message and no button
+    document.getElementById("name").remove();
+    document.getElementById("no-button").remove();
+
+    // Update text content, show message, and change image source to "dance.gif"
+    const yesMessage = document.getElementById("question");
+    yesMessage.textContent = "LESGOOO see you on the 14th babygirl😘😘";
+    yesMessage.style.display = "block";
+    yesMessage.style.fontSize = "24px"; // Adjust font size here
+    document.querySelector(".image").src = "images/dance.gif";
+
+    // Change background image
+    document.body.style.backgroundImage = "url('images/toothless.gif')";
+
+    // Remove yes button
+    document.getElementById("yesButton").remove();
   }
-  
+}
