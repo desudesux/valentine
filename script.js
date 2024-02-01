@@ -51,20 +51,24 @@ document
   .getElementById("no-button")
   .addEventListener("click", handleNoButtonClick);
 
-function showMessage(response) {
-  if (response === "Yes") {
-    // Remove name message and no button
-    document.getElementById("name").remove();
-    document.getElementById("no-button").remove();
-
-    // Update text content, show message, and change image source to "dance.gif"
-    const yesMessage = document.getElementById("question");
-    yesMessage.textContent = "LESGOOO see you on the 14th babygirl😘😘";
-    yesMessage.style.display = "block";
-    yesMessage.style.fontSize = "24px"; // Adjust font size here
-    document.querySelector(".image").src = "images/dance.gif";
-
-    // Remove yes button
-    document.getElementById("yesButton").remove();
+  function showMessage(response) {
+    if (response === "Yes") {
+      // Remove name message and no button
+      document.getElementById("name").remove();
+      document.getElementById("no-button").remove();
+  
+      // Update text content, show message, and change image source to "dance.gif"
+      const yesMessage = document.getElementById("question");
+      yesMessage.textContent = "LESGOOO see you on the 14th babygirl😘😘";
+      yesMessage.style.display = "block";
+      yesMessage.style.fontSize = "24px"; // Adjust font size here
+      document.querySelector(".image").src = "images/dance.gif";
+  
+      // Change background image
+      document.body.style.backgroundImage = "url('images/toothless.gif')";
+  
+      // Remove yes button
+      document.getElementById("yesButton").remove();
+    }
   }
-}
+  
