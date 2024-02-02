@@ -66,16 +66,15 @@ function showMessage(response) {
     // Change background image
     document.body.style.backgroundImage = "url('images/toothless.gif')";
     document.querySelector(".image").src = "images/dance.gif";
+    document.getElementById("yesButton").remove();
     // Remove the "No" button
+    document.getElementById("question").textContent = "LESGOOO see you on the 14th babygirl😘😘";
     document.getElementById("no-button").remove();
     // Remove the "Yes" button
-    document.getElementById("yesButton").remove();
 
     // Update text content, show message, and change image source to "dance.gif"
     const yesMessage = document.getElementById("question");
-    yesMessage.textContent = "LESGOOO see you on the 14th babygirl😘😘";
-    yesMessage.style.display = "block";
-    yesMessage.style.fontSize = "24px"; // Adjust font size here
+ 
     document.querySelector(".image").src = "images/dance.gif";
   }
 }
