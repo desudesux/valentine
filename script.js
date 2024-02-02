@@ -65,6 +65,7 @@ document
     if (response === "Yes") {
       // Change background image
       document.body.style.backgroundImage = "url('images/toothless.gif')";
+      document.querySelector(".image").src = "images/dance.gif";
       // Remove the "No" button
     document.getElementById("no-button").remove();
 
