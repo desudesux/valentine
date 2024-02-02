@@ -65,7 +65,9 @@ document
     if (response === "Yes") {
       // Change background image
       document.body.style.backgroundImage = "url('images/toothless.gif')";
-      
+      // Remove the "No" button
+    document.getElementById("no-button").remove();
+
       // Update text content, show message, and change image source to "dance.gif"
       const yesMessage = document.getElementById("question");
       yesMessage.textContent = "LESGOOO see you on the 14th babygirl😘😘";
